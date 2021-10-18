@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EventTrackerHomeController;
 use App\Http\Controllers\StudentController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -25,3 +26,12 @@ Route::get('/edit-student/{id}',[StudentController::class, 'edit']);
 Route::post('/update-student/{id}',[StudentController::class, 'update']);
 
 Route::get('/delete-student/{id}',[StudentController::class, 'destroy']);
+
+
+//Event Tracker Api/Routes
+Route::get('/getallevents', [EventTrackerHomeController::class,'getEvents']);
+Route::post('/runtasks/{time}', [EventTrackerHomeController::class,'run_tasks']);
+Route::get('/generatereport', [EventTrackerHomeController::class,'getReport']);
+Route::post('/starttasks/{time}', [EventTrackerHomeController::class,'start_task']);
+Route::post('/stoptasks/{time}', [EventTrackerHomeController::class,'stop_task']);
+Route::post('/reporttasks/{time}', [EventTrackerHomeController::class,'report_task']);
