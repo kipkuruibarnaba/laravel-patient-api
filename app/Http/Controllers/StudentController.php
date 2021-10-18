@@ -62,9 +62,9 @@ class StudentController extends Controller
     public function show($id)
     {
         $students = Student::all();
-        return response()->json([
-            'data'=>$students
-        ]);
+        // return response()->json([
+        //     'data'=>$students
+        // ]);
     }
 
     /**
