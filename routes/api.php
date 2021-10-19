@@ -1,7 +1,9 @@
 <?php
 
 use App\Http\Controllers\EventTrackerHomeController;
+use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StudentController;
+use App\Http\Controllers\UsersController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +37,17 @@ Route::get('/generatereport', [EventTrackerHomeController::class,'getReport']);
 Route::post('/starttasks/{time}', [EventTrackerHomeController::class,'start_task']);
 Route::post('/stoptasks/{time}', [EventTrackerHomeController::class,'stop_task']);
 Route::post('/reporttasks/{time}', [EventTrackerHomeController::class,'report_task']);
+
+//User Api/Routes
+Route::post('register',[UsersController::class,'register']);
+Route::post('login',[UsersController::class,'login']);
+
+
+//Product Api/Routes
+Route::post('addproduct',[ProductsController::class,'addproduct']);
+Route::get('listproducts',[ProductsController::class,'listproducts']);
+Route::delete('delete/{id}',[ProductsController::class,'delete']);
+Route::get('product/{id}',[ProductsController::class,'getProduct']);
+Route::put('update/{id}',[ProductsController::class,'update']);
+
+Route::get('search/{key}',[ProductsController::class,'search']);
