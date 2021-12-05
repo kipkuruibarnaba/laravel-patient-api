@@ -54,8 +54,6 @@ class PatientController extends Controller
     }
     public function addpatient(Request $request)
     {
-        // $facility = explode("||",$request->input('facilityname'));
-
         $Patient = new Patient;
         $Patient->facilityid=$request->facilityname;
         $Patient->facilityname=$request->facilityname;
