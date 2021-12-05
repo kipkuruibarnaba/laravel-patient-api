@@ -4,6 +4,7 @@ use App\Http\Controllers\EventTrackerHomeController;
 use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\PatientController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -50,4 +51,12 @@ Route::delete('delete/{id}',[ProductsController::class,'delete']);
 Route::get('product/{id}',[ProductsController::class,'getProduct']);
 Route::put('update/{id}',[ProductsController::class,'update']);
 
-Route::get('search/{key}',[ProductsController::class,'search']);
+
+//Patients Api/Routes
+Route::post('addhealthfacility',[PatientController::class,'addfacility']);
+Route::post('addpatient',[PatientController::class,'addpatient']);
+Route::get('listpatients',[PatientController::class,'listpatients']);
+Route::get('listfacilities',[PatientController::class,'listfacilities']);
+Route::get('statistics',[PatientController::class,'statistics']);
+
+Route::get('search/{key}',[PatientController::class,'search']);

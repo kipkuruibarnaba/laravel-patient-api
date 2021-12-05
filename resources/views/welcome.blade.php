@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
-    <title>Student api</title>
+    <title>Patient api</title>
   </head>
   <body>
     <div class="container">
@@ -16,7 +16,7 @@
             <div class="col-md-12 m-5 justify-content-centre">
                 <div class="card">
                     <div class="card-header">
-                        <h4>Student Api</h4>
+                        <h4>Patient Api</h4>
                     </div>
                     <div class="card-body">
 
